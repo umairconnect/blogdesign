@@ -29,3 +29,11 @@ function my_excerpt_length($length) {
     return 15;
 }
 add_filter('excerpt_length', 'my_excerpt_length');
+
+function change_excerpt( $more ) {
+    if(post_type_exists('services')){
+        return '';
+    }
+    return '...';
+}
+add_filter('excerpt_more', 'change_excerpt'); //Wordpress 2.8+

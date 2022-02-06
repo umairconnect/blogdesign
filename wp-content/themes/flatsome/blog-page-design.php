@@ -56,9 +56,12 @@ function getFirstXWord($string, $a) {
 
                                 <div class="col large-6 small-12">
                                     <h2><?php echo  the_title() ?></h2>
-                                    <p class="date_cate"><?php echo get_the_date() ?> . <?php echo the_category( $post->ID); ?></p>
+                                    <p class="date_cate"><?php echo the_category( $post->ID); ?> . <?php echo get_the_date() ?></p>
                                     <p><?php echo the_excerpt()
                                          ?></p>
+                                    <a class="parameter_link" href="<?php echo get_permalink(); ?>">
+                                        <img src="<?php bloginfo('template_url'); ?>/assets/img/union.png"/>
+                                    </a>
                                 </div>
 
                             </div>
@@ -72,31 +75,57 @@ function getFirstXWord($string, $a) {
         <section class="latest_post_display">
             <div class="container">
                 <div class="row">
-                <?php
+                    <?php
 
-                $the_query= new WP_Query( array('posts_per_page' => 5, ) );
+                    $the_query= new WP_Query( array('posts_per_page' => 5, ) );
 
-                if ( $the_query->have_posts() ) :
+                    if ( $the_query->have_posts() ) :
 
-                    while ( $the_query->have_posts() ) : $the_query->the_post();
-                        ?>
+                        while ( $the_query->have_posts() ) : $the_query->the_post();
+                            ?>
 
-                            <div class="col large-4 small-12">
-                                <?php echo  get_the_post_thumbnail() ?>
-                                    <div class="post_content">
-                                        <h2><?php echo  the_title() ?></h2>
-                                        <p class="date_cate"><?php echo get_the_date() ?> . <?php echo the_category( $post->ID); ?> </p>
-                                        <p><?php echo the_excerpt()
-                                            ?></p>
-                                    </div>
+                                <div class="col large-4 small-12">
+                                    <?php echo  get_the_post_thumbnail() ?>
+                                        <div class="post_content">
+                                            <h2><?php echo  the_title() ?></h2>
+                                            <p class="date_cate"><?php echo the_category( $post->ID); ?> . <?php echo get_the_date() ?>  </p>
+                                            <?php echo the_excerpt()
+                                                ?>
+                                            <a class="parameter_link" href="<?php echo get_permalink(); ?>">
+                                                <img src="<?php bloginfo('template_url'); ?>/assets/img/union.png"/>
+                                            </a>
+                                        </div>
+                                </div>
+
+
+                        <?php endwhile; ?>
+                    <?php else : ?>
+                        <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                    <?php endif; ?>
+
+                    <div class="col large-4 small-12">
+                        <div class="post_content">
+                            <div class="post_gredient">
+                                <h1>Human Powered Data that powers the future.</h1>
                             </div>
 
+                            <a href="" class="btn primery request_demo">
+                                Request Demo
+                            </a>
+                        </div>
+                    </div>
 
-                    <?php endwhile; ?>
-                <?php else : ?>
-                    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-                <?php endif; ?>
+                </div>
+            </div>
+        </section>
 
+        <section class="section stream_sec" style="background-image: url(<?php bloginfo('template_url'); ?>/assets/img/blog-bg.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Streamlytics presents Now Loading…</h1>
+                        <p>Insights delivered straight to your inbox to keep today’s innovative industry leaders abreast of how data is transforming industries.</p>
+                    </div>
                 </div>
             </div>
         </section>
