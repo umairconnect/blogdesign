@@ -125,6 +125,7 @@ function getFirstXWord($string, $a) {
                     <div class="col-lg-12">
                         <h1>Streamlytics presents Now Loading…</h1>
                         <p>Insights delivered straight to your inbox to keep today’s innovative industry leaders abreast of how data is transforming industries.</p>
+                         <?php echo do_shortcode('[contact-form-7 id="2013" title="subscribe"]') ?>
                     </div>
                 </div>
             </div>

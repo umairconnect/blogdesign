@@ -1,6 +1,4 @@
-<h6 class="entry-category is-xsmall">
-	<?php echo get_the_category_list( __( ', ', 'flatsome' ) ) ?>
-</h6>
+
 
 <?php
 if ( is_single() ) {
@@ -10,7 +8,7 @@ if ( is_single() ) {
 }
 ?>
 
-<div class="entry-divider is-divider small"></div>
+
 
 <?php
 $single_post = is_singular( 'post' );

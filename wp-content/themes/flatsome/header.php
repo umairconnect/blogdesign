@@ -121,7 +121,8 @@
         }
         .stream_sec {
             background-position: top;
-            padding: 50px;
+            padding: 50px 50px;stream_sec
+            background-size: cover;
         }
         .stream_sec h1{
             color: #28104E;
@@ -133,6 +134,68 @@
             color: #28104E;
         }
 
+        .single-post article .entry-header{
+         padding-top: 9%;
+        }
+        .single-post .breadcrumb-container {
+            margin-top: 6%;
+            border-top: 1px solid #28104E;
+            border-bottom: 1px solid #28104E;
+            padding: 15px 0px;
+            color: #28104E;
+        }
+        .single-post .entry-title {
+            font-size: 54px;
+            color: #28104E;
+        }
+        .single-post .entry-meta {
+            color: #28104E;
+            font-size: 16px;
+            text-transform: capitalize;
+        }
+        .breadcrumb-container a {
+            color: #28104E !important;
+            font-size: 16px !important;
+        }
+        .breadcrumb-container.theme5 a::after {
+            top: 5px !important;
+            font-size: 18px;
+            color: #28104E !important;
+            content: ">" !important;
+        }
+        .margin-auto {
+            margin: auto;
+        }
+        .background-white {
+            background:white;
+        }
+        .entry-image img {
+            max-height: 620px;
+            object-fit: cover;
+        }
+        .entry-content {
+            color: #28104E;
+        }
+        .subscribe_from {
+            display: flex;
+            align-items: center;
+        }
+        .subscribe_from input {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 24px 20px;
+        }
+        .subscribe_from input::placeholder {
+            color:white;
+        }
+        .subscribe_from button {
+            font-weight: 300;
+            text-transform: capitalize;
+            padding-top: 7px;
+            color: white;
+            padding-left: 36px;
+        }
         @media (max-width: 850px) {
             .category_menu {
                 display: none;
